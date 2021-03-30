@@ -8,7 +8,7 @@ import {
   Dimensions,
   Image,
 } from 'react-native'
-import { Button, Divider } from 'react-native-elements'
+import { Button, Divider, Rating } from 'react-native-elements'
 import CloseHeader from '../component/CloseHeader'
 import CartItem from '../component/CartItem'
 import { Buttons, Colors } from '../styles'
@@ -127,7 +127,11 @@ class Profile extends Component {
             </View>
             <View style={{ marginLeft: 10 }}>
               <Text style={headText}>mobileextraltd</Text>
-              <Text style={headText}>(623020) * 98% positive feedback</Text>
+              <Text style={headText}>
+                (623020){' '}
+                <Icon style={{ marginLeft: 18 }} name="star" size={15} /> 98%
+                positive feedback
+              </Text>
               <Text style={headText}>Member Since: 2011</Text>
               <Text style={headText}>Location: UK</Text>
             </View>
@@ -167,27 +171,46 @@ class Profile extends Component {
             <Text style={{ color: 'gray', marginTop: 5 }}>
               Item as described
             </Text>
-            <Text style={{ fontSize: 25, fontWeight: 'bold', marginRight: 43 }}>
-              *****
-            </Text>
+            <Rating
+              type="custom"
+              ratingCount={5}
+              readonly
+              imageSize={20}
+              minValue={4}
+              ratingColor="#000"
+              style={{ borderColor: '#000', marginRight: 15 }}
+            />
             <Text style={{ color: 'gray', marginTop: 5, marginRight: 30 }}>
               (23105)
             </Text>
           </View>
           <View style={rawData}>
             <Text style={{ color: 'gray', marginTop: 5 }}>Communication</Text>
-            <Text style={{ fontSize: 25, fontWeight: 'bold', marginRight: 30 }}>
-              *****
-            </Text>
+
+            <Rating
+              type="custom"
+              ratingCount={5}
+              readonly
+              imageSize={20}
+              minValue={4}
+              ratingColor="#000"
+              style={{ borderColor: '#000' }}
+            />
             <Text style={{ color: 'gray', marginTop: 5, marginRight: 30 }}>
               (23105)
             </Text>
           </View>
           <View style={rawData}>
             <Text style={{ color: 'gray', marginTop: 5 }}>Shipping time</Text>
-            <Text style={{ fontSize: 25, fontWeight: 'bold', marginRight: 20 }}>
-              *****
-            </Text>
+            <Rating
+              type="custom"
+              ratingCount={5}
+              readonly
+              imageSize={20}
+              minValue={4}
+              ratingColor="#000"
+              style={{ borderColor: '#000', marginLeft: 12 }}
+            />
             <Text style={{ color: 'gray', marginTop: 5, marginRight: 30 }}>
               (23105)
             </Text>
@@ -196,9 +219,15 @@ class Profile extends Component {
             <Text style={{ color: 'gray', marginTop: 5 }}>
               Shipping charges
             </Text>
-            <Text style={{ fontSize: 25, fontWeight: 'bold', marginRight: 40 }}>
-              *****
-            </Text>
+            <Rating
+              type="custom"
+              ratingCount={5}
+              readonly
+              imageSize={20}
+              minValue={4}
+              ratingColor="#000"
+              style={{ borderColor: '#000', marginRight: 10 }}
+            />
             <Text style={{ color: 'gray', marginTop: 5, marginRight: 30 }}>
               (23105)
             </Text>
@@ -251,7 +280,9 @@ class Profile extends Component {
             <Text style={{ marginRight: 0, color: 'red' }}>555</Text>
           </View>
         </ScrollView>
-        <AppButton title="Save" icon="" theme="solid" />
+        <View style={{ margin: 12 }}>
+          <Button title="Solid Button" />
+        </View>
       </SafeAreaProvider>
     )
   }
