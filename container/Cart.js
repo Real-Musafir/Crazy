@@ -49,7 +49,7 @@ class Cart extends Component {
       backgroundColor: '#fff',
       padding: 10,
     }
-    const rawData = {
+    const dataRow = {
       flexDirection: 'row',
       justifyContent: 'space-between',
     }
