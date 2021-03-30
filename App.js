@@ -19,6 +19,7 @@ import PurchaseHistory from './container/PurchaseHistory'
 import OrderDetails from './component/OrderDetails'
 import Message from './container/Message'
 import SingleMessage from './container/SingleMessage'
+import Profile from './container/Profile'
 
 const Stack = createStackNavigator()
 export default function App() {
@@ -99,6 +100,11 @@ export default function App() {
           <Stack.Screen
             name="SingleMessage"
             component={SingleMessage}
+            options={{ headerTransparent: true, headerMode: 'none' }}
+          />
+          <Stack.Screen
+            name="Profile"
+            component={Profile}
             options={{ headerTransparent: true, headerMode: 'none' }}
           />
         </Stack.Navigator>

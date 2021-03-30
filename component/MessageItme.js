@@ -17,8 +17,6 @@ class MessageItem extends Component {
       backgroundColor: Colors.lightGray,
       borderRadius: 40,
       marginBottom: 20,
-      // marginTop: 20,
-      // marginLeft: 10,
     }
     const rowData = {
       flexDirection: 'row',
