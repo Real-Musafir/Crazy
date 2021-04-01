@@ -15,6 +15,9 @@ class Home extends Component {
   gotoPurchaseHistory = () => {
     this.props.navigation.navigate('Profile')
   }
+  gotoSeller = () => {
+    this.props.navigation.navigate('Seller')
+  }
   render() {
     const products = [
       {
@@ -93,7 +96,12 @@ class Home extends Component {
             paddingRight: 5,
           }}
         >
-          <AppButton title="Selling" icon="tag" theme="solid" />
+          <AppButton
+            action={this.gotoSeller}
+            title="Selling"
+            icon="tag"
+            theme="solid"
+          />
           <AppButton
             action={this.gotoPurchaseHistory}
             title="Deals"
