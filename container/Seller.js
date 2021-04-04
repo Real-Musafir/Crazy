@@ -13,8 +13,17 @@ import CloseHeader from '../component/CloseHeader'
 import CartItem from '../component/CartItem'
 import { Buttons, Colors } from '../styles'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import {
+  Collapse,
+  CollapseHeader,
+  CollapseBody,
+  AccordionList,
+} from 'accordion-collapse-react-native'
 
 class Seller extends Component {
+  gotoListingSummary = () => {
+    this.props.navigation.navigate('ListingSummary')
+  }
   render() {
     const windowWidth = Dimensions.get('window').width
     const scrlStyle = {
@@ -82,7 +91,6 @@ class Seller extends Component {
       borderColor: '#00FF7F',
     }
     const faqPart = {
-      padding: 20,
       flexDirection: 'row',
       justifyContent: 'space-between',
     }
@@ -257,45 +265,181 @@ class Seller extends Component {
             </View>
           </ScrollView>
           <Text style={title}>FAQ</Text>
-          <View style={faqPart}>
-            <Text style={faqTxt}>How much does it cost to sell on eBat?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>What's the best way to send my item?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>Can i sell locally on eBay?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>How much will it cost to post my item?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>How will the buyer pay for my item?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>How should I choose my listing price?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>How does eBay protect sellers?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>What can I sell on eBay?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
-          <View style={faqPart}>
-            <Text style={faqTxt}>How do I create an account?</Text>
-            <Icon name="angle-down" size={22} onPress={this.cartAction} />
-          </View>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>
+                  How much does it cost to sell on eBat?
+                </Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>What's the best way to send my item?</Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>Can i sell locally on eBay?</Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>
+                  How much will it cost to post my item?
+                </Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>How will the buyer pay for my item?</Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>
+                  How should I choose my listing price?
+                </Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>How does eBay protect sellers?</Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>What can I sell on eBay?</Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
+
+          <Collapse style={{ padding: 10 }}>
+            <CollapseHeader>
+              <View style={faqPart}>
+                <Text style={faqTxt}>How do I create an account?</Text>
+                <Icon name="angle-down" size={22} />
+              </View>
+            </CollapseHeader>
+            <CollapseBody>
+              <Text style={{ color: 'gray' }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </Text>
+            </CollapseBody>
+          </Collapse>
         </ScrollView>
         <View style={{ margin: 20 }}>
-          <Button title="List an item" />
+          <Button
+            buttonStyle={{ borderRadius: 20 }}
+            onPress={this.gotoListingSummary}
+            title="List an item"
+          />
         </View>
       </SafeAreaProvider>
     )
