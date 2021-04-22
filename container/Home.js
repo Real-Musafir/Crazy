@@ -9,6 +9,9 @@ class Home extends Component {
   constructor(props) {
     super(props)
   }
+  gotoUserDetails = () => {
+    this.props.navigation.navigate('UserDetails')
+  }
   gotoCategory = () => {
     this.props.navigation.navigate('Category')
   }
@@ -103,7 +106,7 @@ class Home extends Component {
             theme="solid"
           />
           <AppButton
-            action={this.gotoPurchaseHistory}
+            action={this.gotoUserDetails}
             title="Deals"
             icon="bolt"
             theme="solid"

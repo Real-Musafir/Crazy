@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { View } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import React, { Component } from 'react'
+import { View } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 class CartButton extends Component {
   cartAction = () => {
-    this.props.action?.();
-  };
+    this.props.action?.()
+  }
   render() {
     return (
       <Icon
@@ -14,8 +14,8 @@ class CartButton extends Component {
         iconStyle={{ marginTop: 20 }}
         onPress={this.cartAction}
       />
-    );
+    )
   }
 }
 
-export default CartButton;
+export default CartButton

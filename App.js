@@ -22,6 +22,7 @@ import SingleMessage from './container/SingleMessage'
 import Profile from './container/Profile'
 import Seller from './container/Seller'
 import ListingSummary from './container/ListingSummary'
+import UserDetails from './component/UserDetails'
 
 const Stack = createStackNavigator()
 export default function App() {
@@ -118,6 +119,11 @@ export default function App() {
           <Stack.Screen
             name="ListingSummary"
             component={ListingSummary}
+            options={{ headerTransparent: true, headerMode: 'none' }}
+          />
+          <Stack.Screen
+            name="UserDetails"
+            component={UserDetails}
             options={{ headerTransparent: true, headerMode: 'none' }}
           />
         </Stack.Navigator>
