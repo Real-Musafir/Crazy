@@ -14,6 +14,7 @@ class CloseHeader extends Component {
         containerStyle={{
           backgroundColor: '#fff',
           display: 'flex',
+
           justifyContent: 'flex-start',
           borderBottomColor: 'rgba(42,42,42,.1)',
           borderBottomWidth: 1,
@@ -29,11 +30,13 @@ class CloseHeader extends Component {
             containerStyle={{ marginRight: 10 }}
             buttonStyle={{ padding: 4, margin: 0 }}
             type="clear"
-            icon={<Icon name="times" size={22} color="#2a2a2a" />}
+            icon={<Icon name={this.props.icon} size={22} color="#2a2a2a" />}
           />
         }
         centerComponent={<Text style={{ fontSize: 20 }}>{text}</Text>}
-        rightComponent={<Text></Text>}
+        rightComponent={
+          <Icon name={this.props.lastIcon} size={22} color="#2a2a2a" />
+        }
       />
     )
   }

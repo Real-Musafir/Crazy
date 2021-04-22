@@ -7,6 +7,9 @@ import { Typography, Buttons, Colors } from '../styles'
 import CartButton from './CartButton'
 
 class UserDetails extends Component {
+  gotoSettings = () => {
+    this.props.navigation.navigate('Settings')
+  }
   render() {
     const scrlStyle = {
       backgroundColor: '#fff',
@@ -119,6 +122,7 @@ class UserDetails extends Component {
             >
               <View style={rawData}>
                 <Icon
+                  onPress={this.gotoSettings}
                   style={{ color: '#A9A9A9', padding: 2, marginLeft: 10 }}
                   name="cog"
                   size={35}
